@@ -9,15 +9,16 @@ var rangeBlue = null;
 var divSquare = null;
 
 function start(){
-    divSquare = document.querySelector('#square');
-
+    
     rangeRed = document.querySelector('#rangeRed');
     rangeGreen = document.querySelector('#rangeGreen');
     rangeBlue = document.querySelector('#rangeBlue');
-
+    
     inputRed = document.querySelector('#inputRed');
     inputGreen = document.querySelector('#inputGreen');
     inputBlue = document.querySelector('#inputBlue');
+
+    divSquare = document.querySelector('#square');
     
     rangeRed.addEventListener('input', setColor);
     rangeGreen.addEventListener('input', setColor);
@@ -35,8 +36,6 @@ function setColor(){
     inputGreen.value = green;
     inputBlue.value = blue;
 
-    var rgbCSS = 'rgb('+red+','+green+','+blue+')';
-
-    divSquare.style.backgroundColor = rgbCSS;
+    divSquare.style.backgroundColor = `rgb(${red},${green},${blue})`;
 }
 
